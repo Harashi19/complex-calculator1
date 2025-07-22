@@ -7,6 +7,12 @@ struct complex_number add(struct complex_number a, struct complex_number b) {
     result.imag = a.imag + b.imag;
     return result;
 }
+struct complex_number subtract(struct complex_number a, struct complex_number b) {
+    struct complex_number result;
+    result.real = a.real - b.real;
+    result.imag = a.imag - b.imag;
+    return result;
+}
 
 void print_complex(struct complex_number c) {
     if (c.imag >= 0)

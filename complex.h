@@ -7,6 +7,7 @@ struct complex_number {
 };
 
 struct complex_number add(struct complex_number a, struct complex_number b);
+struct complex_number subtract(struct complex_number a, struct complex_number b);
 void print_complex(struct complex_number c);
 
 #endif

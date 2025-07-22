@@ -3,6 +3,13 @@
 
 int main() {
     struct complex_number a, b, result;
+    int option;
+
+    printf("Choose operation:\n");
+    printf("1. Addition\n");
+    printf("2. Subtraction\n");
+    printf("Enter your option: ");
+    scanf("%d", &option);
 
     printf("Enter real and imaginary parts of the first complex number: ");
     scanf("%lf %lf", &a.real, &a.imag);
@@ -10,10 +17,17 @@ int main() {
     printf("Enter real and imaginary parts of the second complex number: ");
     scanf("%lf %lf", &b.real, &b.imag);
 
-    result = add(a, b);
+    if (option == 1) {
+        result = add(a, b);
+        printf("Sum = ");
+    } else if (option == 2) {
+        result = subtract(a, b);
+        printf("Difference = ");
+    } else {
+        printf("Invalid option!\n");
+        return 1;
+    }
 
-    printf("Sum = ");
     print_complex(result);
-
     return 0;
 }
