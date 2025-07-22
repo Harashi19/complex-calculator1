@@ -8,8 +8,10 @@ int main() {
     printf("Choose operation:\n");
     printf("1. Addition\n");
     printf("2. Subtraction\n");
+    printf("3. Multiplication\n");
     printf("Enter your option: ");
     scanf("%d", &option);
+
 
     printf("Enter real and imaginary parts of the first complex number: ");
     scanf("%lf %lf", &a.real, &a.imag);
@@ -23,10 +25,14 @@ int main() {
     } else if (option == 2) {
         result = subtract(a, b);
         printf("Difference = ");
+    } else if (option == 3) {
+        result = multiply(a, b);
+        printf("Product = ");
     } else {
         printf("Invalid option!\n");
         return 1;
     }
+
 
     print_complex(result);
     return 0;
