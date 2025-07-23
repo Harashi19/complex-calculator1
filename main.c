@@ -5,10 +5,11 @@ int main() {
     struct complex_number a, b, result;
     int option;
 
-    printf("Choose operation:\n");
     printf("1. Addition\n");
     printf("2. Subtraction\n");
     printf("3. Multiplication\n");
+    printf("4. Division\n");
+
     printf("Enter your option: ");
     scanf("%d", &option);
 
@@ -28,10 +29,14 @@ int main() {
     } else if (option == 3) {
         result = multiply(a, b);
         printf("Product = ");
+    } else if (option == 4) {
+        result = divide(a, b);
+        printf("Quotient = ");
     } else {
         printf("Invalid option!\n");
         return 1;
     }
+
 
 
     print_complex(result);
