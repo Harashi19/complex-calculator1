@@ -38,6 +38,9 @@ struct complex_number divide(struct complex_number a, struct complex_number b) {
 double modulus(struct complex_number c) {
     return sqrt(c.real * c.real + c.imag * c.imag);
 }
+int are_equal(struct complex_number a, struct complex_number b) {
+    return (a.real == b.real) && (a.imag == b.imag);
+}
 
 void print_complex(struct complex_number c) {
     if (c.imag >= 0)

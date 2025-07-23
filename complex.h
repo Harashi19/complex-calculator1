@@ -11,6 +11,7 @@ struct complex_number subtract(struct complex_number a, struct complex_number b)
 struct complex_number multiply(struct complex_number a, struct complex_number b);
 struct complex_number divide(struct complex_number a, struct complex_number b);
 double modulus(struct complex_number c);
+int are_equal(struct complex_number a, struct complex_number b);
 void print_complex(struct complex_number c);
 
 #endif
